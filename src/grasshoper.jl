@@ -198,7 +198,7 @@ function decrypt(ctxt :: Array{UInt8}, E :: GrasshoperContext)
 end
 
 decrypt(E :: GrasshoperContext, ctxt :: Array{UInt8}) = decrypt(txt, E)
-
+decrypt!(ctxt :: Vector{UInt8}, E :: GrasshoperContext, txt :: Vector{UInt8}) = decrypt_block!(ctxt, E, txt)
 
 
 
